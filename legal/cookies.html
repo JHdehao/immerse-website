@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie 政策 - Immerse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="legal.css">
+</head>
+
+<body>
+    <div class="legal-container">
+        <a href="../index.html" class="back-link">← 返回设置</a>
+
+        <div class="legal-header">
+            <h1>Cookie 政策</h1>
+            <p class="update-date">最后更新：2024年12月28日</p>
+            <p style="margin-top: 8px;"><a href="cookies-en.html" style="color: var(--legal-accent);">English
+                    Version</a></p>
+        </div>
+
+        <div class="legal-section">
+            <h2>1. 什么是 Cookie 和本地存储</h2>
+            <p>Cookie 是网站存储在您设备上的小型文本文件。本地存储（Local Storage）是浏览器提供的一种在您设备上存储数据的方式。</p>
+            <p>作为浏览器扩展，Immerse 主要使用 Chrome 的 Storage API（chrome.storage）来存储数据，这是一种专为扩展设计的安全本地存储机制。</p>
+        </div>
+
+        <div class="legal-section">
+            <h2>2. 我们如何使用存储</h2>
+
+            <h3>2.1 必要存储</h3>
+            <p>这些存储对于扩展的正常运行是必需的：</p>
+            <ul>
+                <li><strong>settings</strong>：您的应用设置（主题、难度、词库选择等）</li>
+                <li><strong>authToken</strong>：登录会话信息（仅在登录后）</li>
+                <li><strong>activeProvider</strong>：当前选择的 AI 提供商</li>
+            </ul>
+
+            <h3>2.2 功能性存储</h3>
+            <p>这些存储用于提供更好的用户体验：</p>
+            <ul>
+                <li><strong>wordbook</strong>：您的生词本数据</li>
+                <li><strong>learningStats</strong>：学习统计信息</li>
+                <li><strong>dictionaryCache</strong>：词典缓存以加快加载速度</li>
+            </ul>
+
+            <h3>2.3 可选存储</h3>
+            <p>以下数据仅在您选择相关功能时存储：</p>
+            <ul>
+                <li><strong>providers.*</strong>：您的 API Key（使用 BYOK 功能时）</li>
+                <li><strong>syncSettings</strong>：云同步配置（启用同步时）</li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>3. 第三方 Cookie</h2>
+            <p>Immerse 扩展本身不设置第三方 Cookie。但是：</p>
+            <ul>
+                <li>当您使用 Google 登录时，Google 可能会设置自己的 Cookie</li>
+                <li>当您使用 AI 功能时，AI 服务商可能会使用 Cookie</li>
+            </ul>
+            <p>这些第三方的 Cookie 使用受其各自隐私政策约束。</p>
+        </div>
+
+        <div class="legal-section">
+            <h2>4. 数据保留</h2>
+            <ul>
+                <li><strong>本地数据</strong>：存储在您的浏览器中，直到您清除浏览器数据或卸载扩展</li>
+                <li><strong>云端数据</strong>：保留至您删除账户或请求删除数据</li>
+                <li><strong>会话数据</strong>：在您退出登录时自动清除</li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>5. 管理您的数据</h2>
+            <p>您可以通过以下方式管理存储的数据：</p>
+            <ul>
+                <li><strong>扩展设置</strong>：在 Immerse 设置页面中清除本地数据</li>
+                <li><strong>浏览器设置</strong>：在 Chrome 设置中管理扩展数据</li>
+                <li><strong>卸载扩展</strong>：卸载扩展将删除所有本地存储的数据</li>
+            </ul>
+            <div class="highlight-box">
+                <strong>注意</strong>：清除本地数据不会影响已同步到云端的数据。如需删除云端数据，请在账户设置中操作。
+            </div>
+        </div>
+
+        <div class="legal-section">
+            <h2>6. 联系我们</h2>
+            <p>如有关于 Cookie 或数据存储的问题，请联系我们：</p>
+            <ul>
+                <li>GitHub Issues: <a href="https://github.com/JHdehao/immerse-website/issues"
+                        target="_blank">https://github.com/JHdehao/immerse-website/issues</a></li>
+            </ul>
+        </div>
+
+        <div class="legal-footer">
+            <p>© 2024 Immerse. 保留所有权利。</p>
+            <p>
+                <a href="privacy.html">隐私政策</a> ·
+                <a href="terms.html">服务条款</a> ·
+                <a href="security.html">安全说明</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

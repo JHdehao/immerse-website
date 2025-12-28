@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security & Data Handling - Immerse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="legal.css">
+</head>
+
+<body>
+    <div class="legal-container">
+        <a href="../index.html" class="back-link">← Back to Settings</a>
+
+        <div class="legal-header">
+            <h1>Security & Data Handling</h1>
+            <p class="update-date">Last updated: December 28, 2024</p>
+            <p style="margin-top: 8px;"><a href="security.html" style="color: var(--legal-accent);">中文版</a></p>
+        </div>
+
+        <div class="legal-section">
+            <h2>1. Data Storage Security</h2>
+
+            <h3>1.1 Local Storage</h3>
+            <p>The following data is stored in your browser's local storage:</p>
+            <ul>
+                <li>App settings and preferences</li>
+                <li>Your API keys (if using BYOK feature)</li>
+                <li>Cached dictionary data</li>
+                <li>Learning progress statistics</li>
+            </ul>
+
+            <div class="highlight-box">
+                <strong>API Key Security</strong>: Your API keys are stored only in your local browser using Chrome's
+                secure storage API (chrome.storage.sync). Our servers never receive or store your API keys.
+            </div>
+
+            <h3>1.2 Cloud Storage</h3>
+            <p>When you log in and enable cloud sync, the following data is stored on our cloud servers (Supabase):</p>
+            <ul>
+                <li>Account information</li>
+                <li>Wordbook data</li>
+                <li>Learning statistics</li>
+                <li>Subscription status</li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>2. Data Transmission Security</h2>
+            <ul>
+                <li>All network communications use HTTPS/TLS encryption</li>
+                <li>API requests are made through secure endpoints</li>
+                <li>Sensitive data is appropriately processed before transmission</li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>3. Third-Party AI Services</h2>
+            <p>When you use AI features:</p>
+
+            <h3>3.1 Built-in AI (Pro/Ultra Users)</h3>
+            <ul>
+                <li>Requests are forwarded through our proxy server</li>
+                <li>We do not log or store your query content</li>
+                <li>Only usage volume is recorded for quota management</li>
+            </ul>
+
+            <h3>3.2 Bring Your Own Key (BYOK)</h3>
+            <ul>
+                <li>Requests are sent directly from your browser to the AI service provider</li>
+                <li>We are not involved in the request process</li>
+                <li>Please read each AI service provider's privacy policy to understand how they handle your data</li>
+            </ul>
+
+            <div class="highlight-box">
+                <strong>Tip</strong>: In BYOK mode, your data only travels between your device and the AI service
+                provider, not through our servers.
+            </div>
+        </div>
+
+        <div class="legal-section">
+            <h2>4. Permissions Explained</h2>
+            <p>Browser permissions requested by Immerse and their purposes:</p>
+            <ul>
+                <li><strong>storage</strong>: Store your settings and learning data</li>
+                <li><strong>activeTab</strong>: Perform vocabulary replacement on the current page</li>
+                <li><strong>scripting</strong>: Inject content scripts to enable vocabulary replacement</li>
+                <li><strong>tts</strong>: Provide word pronunciation feature</li>
+                <li><strong>identity</strong>: Support third-party logins like Google</li>
+            </ul>
+            <p>We do not collect or access any data unrelated to these functions.</p>
+        </div>
+
+        <div class="legal-section">
+            <h2>5. Security Best Practices</h2>
+            <p>To protect your account and data, we recommend:</p>
+            <ul>
+                <li>Use strong passwords or trusted third-party logins</li>
+                <li>Do not keep login status on public devices</li>
+                <li>Regularly rotate your API keys</li>
+                <li>Contact us immediately if you notice abnormal activity</li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>6. Data Deletion</h2>
+            <p>You can at any time:</p>
+            <ul>
+                <li>Clear local data in settings</li>
+                <li>Delete cloud data through account settings</li>
+                <li>Contact us to request complete account deletion</li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>7. Security Incidents</h2>
+            <p>In case of a security incident, we will:</p>
+            <ul>
+                <li>Immediately investigate and fix the issue</li>
+                <li>Notify affected users within a reasonable time</li>
+                <li>Report to relevant authorities as required by law</li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>8. Contact Us</h2>
+            <p>For security-related questions or to report vulnerabilities, please contact us via:</p>
+            <ul>
+                <li>GitHub Issues: <a href="https://github.com/JHdehao/immerse-website/issues"
+                        target="_blank">https://github.com/JHdehao/immerse-website/issues</a></li>
+            </ul>
+        </div>
+
+        <div class="legal-footer">
+            <p>© 2024 Immerse. All rights reserved.</p>
+            <p>
+                <a href="privacy-en.html">Privacy Policy</a> ·
+                <a href="terms-en.html">Terms of Service</a> ·
+                <a href="cookies-en.html">Cookie Policy</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

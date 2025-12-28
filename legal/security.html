@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安全说明 - Immerse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="legal.css">
+</head>
+
+<body>
+    <div class="legal-container">
+        <a href="../index.html" class="back-link">← 返回设置</a>
+
+        <div class="legal-header">
+            <h1>安全与数据处理</h1>
+            <p class="update-date">最后更新：2024年12月28日</p>
+            <p style="margin-top: 8px;"><a href="security-en.html" style="color: var(--legal-accent);">English
+                    Version</a></p>
+        </div>
+
+        <div class="legal-section">
+            <h2>1. 数据存储安全</h2>
+
+            <h3>1.1 本地存储</h3>
+            <p>以下数据存储在您的浏览器本地存储中：</p>
+            <ul>
+                <li>应用设置和偏好</li>
+                <li>您的 API Key（如使用 BYOK 功能）</li>
+                <li>缓存的词典数据</li>
+                <li>学习进度统计</li>
+            </ul>
+
+            <div class="highlight-box">
+                <strong>API Key 安全</strong>：您的 API Key 仅存储在本地浏览器中，使用 Chrome 的安全存储 API
+                (chrome.storage.sync)。我们的服务器永远不会接收或存储您的 API Key。
+            </div>
+
+            <h3>1.2 云端存储</h3>
+            <p>当您登录并启用云同步时，以下数据会存储在我们的云服务器（Supabase）上：</p>
+            <ul>
+                <li>账户信息</li>
+                <li>生词本数据</li>
+                <li>学习统计</li>
+                <li>订阅状态</li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>2. 数据传输安全</h2>
+            <ul>
+                <li>所有网络通信均使用 HTTPS/TLS 加密</li>
+                <li>API 请求通过安全的端点进行</li>
+                <li>敏感数据在传输前会进行适当处理</li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>3. 第三方 AI 服务</h2>
+            <p>当您使用 AI 功能时：</p>
+
+            <h3>3.1 内置 AI（Pro/Ultra 用户）</h3>
+            <ul>
+                <li>请求通过我们的代理服务器转发</li>
+                <li>我们不会记录或存储您的查询内容</li>
+                <li>仅记录使用量用于配额管理</li>
+            </ul>
+
+            <h3>3.2 自带 API Key (BYOK)</h3>
+            <ul>
+                <li>请求直接从您的浏览器发送至 AI 服务商</li>
+                <li>我们不参与请求过程</li>
+                <li>请阅读各 AI 服务商的隐私政策了解他们如何处理您的数据</li>
+            </ul>
+
+            <div class="highlight-box">
+                <strong>提示</strong>：使用 BYOK 模式时，您的数据仅在您的设备和 AI 服务商之间传输，不经过我们的服务器。
+            </div>
+        </div>
+
+        <div class="legal-section">
+            <h2>4. 权限说明</h2>
+            <p>Immerse 扩展请求的浏览器权限及用途：</p>
+            <ul>
+                <li><strong>storage</strong>：存储您的设置和学习数据</li>
+                <li><strong>activeTab</strong>：在当前页面上进行词汇替换</li>
+                <li><strong>scripting</strong>：注入内容脚本以实现词汇替换功能</li>
+                <li><strong>tts</strong>：提供单词发音功能</li>
+                <li><strong>identity</strong>：支持 Google 等第三方登录</li>
+            </ul>
+            <p>我们不会收集或访问与上述功能无关的任何数据。</p>
+        </div>
+
+        <div class="legal-section">
+            <h2>5. 安全最佳实践</h2>
+            <p>为保护您的账户和数据安全，我们建议：</p>
+            <ul>
+                <li>使用强密码或可信的第三方登录</li>
+                <li>不要在公共设备上保存登录状态</li>
+                <li>定期更换您的 API Key</li>
+                <li>如发现异常活动，立即联系我们</li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>6. 数据删除</h2>
+            <p>您可以随时：</p>
+            <ul>
+                <li>在设置中清除本地数据</li>
+                <li>通过账户设置删除云端数据</li>
+                <li>联系我们要求完全删除您的账户</li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>7. 安全事件</h2>
+            <p>如果发生安全事件，我们将：</p>
+            <ul>
+                <li>立即调查并修复问题</li>
+                <li>在合理时间内通知受影响的用户</li>
+                <li>根据法律要求报告给相关机构</li>
+            </ul>
+        </div>
+
+        <div class="legal-section">
+            <h2>8. 联系我们</h2>
+            <p>如有安全相关问题或发现漏洞，请通过以下方式联系我们：</p>
+            <ul>
+                <li>GitHub Issues: <a href="https://github.com/JHdehao/immerse-website/issues"
+                        target="_blank">https://github.com/JHdehao/immerse-website/issues</a></li>
+            </ul>
+        </div>
+
+        <div class="legal-footer">
+            <p>© 2024 Immerse. 保留所有权利。</p>
+            <p>
+                <a href="privacy.html">隐私政策</a> ·
+                <a href="terms.html">服务条款</a> ·
+                <a href="cookies.html">Cookie 政策</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
