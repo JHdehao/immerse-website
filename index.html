@@ -224,43 +224,59 @@
         </div>
     </section>
 
-    <!-- Downloads Section -->
+    <!-- Premium Downloads Section -->
     <section id="download" class="downloads">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header premium">
                 <h2>全平台支持</h2>
                 <p>无论在电脑还是手机，都能同步你的学习进度</p>
             </div>
+
             <div class="download-grid">
-                <!-- Chrome -->
-                <div class="download-card">
-                    <div class="platform-icon bg-chrome">🌐</div>
+                <!-- Chrome (Premium) -->
+                <div class="premium-card">
+                    <div class="icon-wrapper icon-chrome">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 0C5.38 0 0 5.38 0 12s5.38 12 12 12 12-5.38 12-12S18.62 0 12 0zm0 4.91c1.64 0 3.16.51 4.43 1.38L10.3 17.5a6.59 6.59 0 0 1-4.88-2.67l-2.31-4c1.88-3.56 5.56-5.92 9.49-5.92zm-5.49 1.1l2.31 4a6.55 6.55 0 0 0 .58 3.32H4.8a7.1 7.1 0 0 1 .69-3.92l.02-.03zM12 19.09c-2.8 0-5.24-1.57-6.49-3.9l-1.09-1.89h15.16a7.1 7.1 0 0 1-7.58 5.79zm5.43-1.88h-4.83a6.59 6.59 0 0 0 2.22-4.9c0-1.74-.68-3.32-1.79-4.51l5.35-9.26A7.1 7.1 0 0 1 17.43 17.21z" />
+                        </svg>
+                    </div>
                     <h3>桌面浏览器</h3>
-                    <p>支持 Chrome, Edge 等主流 Chromium 浏览器，安装简单，功能最全。</p>
-                    <a href="https://chrome.google.com/webstore" class="btn-primary full-width"
-                        style="justify-content: center;">
-                        添加到 Chrome
+                    <p>支持 Chrome, Edge, Arc 等所有 Chromium 内核浏览器。在桌面端提供最完整的沉浸式翻译体验。</p>
+                    <a href="https://chrome.google.com/webstore" class="btn-primary-filled">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" />
+                        </svg>
+                        免费添加到 Chrome
                     </a>
                 </div>
 
-                <!-- macOS -->
-                <div class="download-card">
-                    <div class="platform-icon bg-macos">💻</div>
-                    <h3>macOS 官方扩展</h3>
-                    <p>专为 Safari 打造，原生性能更出色，完美融合系统体验。</p>
-                    <button class="btn-secondary full-width" style="justify-content: center;"
-                        onclick="openModal('macos-modal')">
-                        安装指南
+                <!-- macOS (Premium) -->
+                <div class="premium-card">
+                    <div class="icon-wrapper icon-apple">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.55-1.48 3.34-3.5 3.34-3.5S15.49 4.88 13 3.5z" />
+                        </svg>
+                    </div>
+                    <h3>macOS 专属</h3>
+                    <p>专为 Safari 打造的原生扩展。深度集成，超低能耗，让你的 Mac 续航更持久。</p>
+                    <button class="btn-glass" onclick="openModal('macos-modal')">
+                        查看安装指南
                     </button>
                 </div>
 
-                <!-- iOS -->
-                <div class="download-card">
-                    <div class="platform-icon bg-ios">📱</div>
+                <!-- iOS (Premium) -->
+                <div class="premium-card">
+                    <div class="icon-wrapper icon-ios">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M16 11.13c0-2.48 2-4.5 4.47-4.5.34 0 .66.04.97.11a5.98 5.98 0 0 0-1.84-2.46l-.1-.08A7.95 7.95 0 0 0 12 2C7.58 2 4 5.58 4 10s3.58 8 8 8c2.97 0 5.57-1.63 6.94-4.04-.46.11-.94.17-1.44.17-3.04 0-5.5-2.46-5.5-5.5zm3.5 4.37c-3.04 0-5.5-2.46-5.5-5.5 0-1.28.43-2.46 1.16-3.41A7.96 7.96 0 0 0 12 18c3.08 0 5.74-1.74 7.02-4.32-.48.11-.98.19-1.52.19z" />
+                        </svg>
+                    </div>
                     <h3>iOS / iPadOS</h3>
-                    <p>在手机上也能享受沉浸式学习，支持移动端 Safari 扩展。</p>
-                    <button class="btn-secondary full-width" style="justify-content: center;"
-                        onclick="openModal('ios-modal')">
+                    <p>将沉浸式学习带到你的 iPhone 和 iPad 上。随时随地，把碎片时间变成外语环境。</p>
+                    <button class="btn-glass" onclick="openModal('ios-modal')">
                         获取 iOS 版
                     </button>
                 </div>
@@ -268,37 +284,45 @@
         </div>
     </section>
 
-    <!-- macOS Install Modal -->
+    <!-- Premium macOS Modal -->
     <div id="macos-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('macos-modal')">&times;</span>
-            <h3 style="margin-bottom: 20px; font-size: 24px;">安装 macOS 版</h3>
-            <div class="install-steps">
-                <p style="margin-bottom: 15px;">请按照以下步骤启动：</p>
-                <ol>
-                    <li>点击下载官方安装包（需 Xcode 运行或等待商店审核）。</li>
-                    <li>在系统中打开 <strong>Safari 浏览器</strong>。</li>
-                    <li>进入顶部菜单的 <strong>设置 > 扩展</strong>。</li>
-                    <li>勾选 <strong>Immerse</strong> 并允许访问。</li>
-                </ol>
+        <div class="modal-content premium-modal">
+            <div class="modal-header">
+                <h3>安装 macOS 扩展</h3>
+                <span class="close-modal" onclick="closeModal('macos-modal')">&times;</span>
             </div>
-            <a href="#" class="btn-primary full-width" style="margin-top: 30px; justify-content: center;">下载 .dmg
-                (即将上线)</a>
+            <div class="modal-body">
+                <ul class="premium-steps">
+                    <li><span class="step-number">1</span> 下载官方安装包（Beta）</li>
+                    <li><span class="step-number">2</span> 运行应用后，打开 Safari 浏览器</li>
+                    <li><span class="step-number">3</span> 前往菜单栏：Safari > 设置 > 扩展</li>
+                    <li><span class="step-number">4</span> 勾选 "Immerse" 并授予权限</li>
+                </ul>
+                <a href="#" class="btn-primary-filled" style="margin-top: 30px;">
+                    下载 macOS 安装包
+                </a>
+            </div>
         </div>
     </div>
 
-    <!-- iOS Install Modal -->
+    <!-- Premium iOS Modal -->
     <div id="ios-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('ios-modal')">&times;</span>
-            <h3 style="margin-bottom: 10px; font-size: 24px;">iOS 版安装指南</h3>
-            <p style="color: var(--text-light); margin-bottom: 20px;">扫码加入 TestFlight 抢先体验</p>
-            <div class="qr-container">
-                <div class="qr-placeholder">
-                    <span>QR CODE</span>
-                </div>
+        <div class="modal-content premium-modal">
+            <div class="modal-header">
+                <h3>iOS 端安装</h3>
+                <span class="close-modal" onclick="closeModal('ios-modal')">&times;</span>
             </div>
-            <p style="font-size: 14px; color: var(--text-light); margin-top: 20px;">* 您需要先安装 Apple 官方的 TestFlight 应用</p>
+            <div class="modal-body" style="text-align: center;">
+                <p style="color: #94a3b8; margin-bottom: 24px;">扫描下方二维码加入 TestFlight</p>
+                <div class="qr-box">
+                    <div
+                        style="width: 200px; height: 200px; background: #000; display: flex; align-items: center; justify-content: center; color: white; border-radius: 12px;">
+                        <!-- Placeholder for visual style -->
+                        SCAN ME
+                    </div>
+                </div>
+                <p style="font-size: 13px; color: #64748b; margin-top: 24px;">需先安装 Apple 官方 TestFlight 应用</p>
+            </div>
         </div>
     </div>
 

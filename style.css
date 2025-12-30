@@ -679,156 +679,219 @@ h1 {
     }
 }
 
-/* Download Section */
+/* =========================================
+   Premium Downloads Section (Light & Cohesive)
+   Theme: Clean, Apple-style, Subtle
+   ========================================= */
+
 .downloads {
-    padding: 80px 0;
-    background: linear-gradient(to bottom, #ffffff, #f9fafb);
+    position: relative;
+    padding: 100px 0;
+    /* Subtle gradient matching the site's overall light theme */
+    background: radial-gradient(circle at top center, #f1f5f9 0%, #ffffff 70%);
+    overflow: hidden;
+    color: var(--text-main);
 }
 
+.section-header.premium h2 {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #1e293b, #475569);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section-header.premium p {
+    color: #64748b;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Premium Grid */
 .download-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
-    margin-top: 40px;
+    margin-top: 60px;
+    position: relative;
+    z-index: 10;
 }
 
-.download-card {
-    background: var(--white);
-    padding: 40px 32px;
+/* Light Premium Card */
+.premium-card {
+    background: #ffffff;
     border-radius: 24px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    text-align: center;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px 32px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    box-shadow: var(--shadow-sm);
+    align-items: flex-start;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    /* Subtle Border & Shadow */
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
 }
 
-.download-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
-    border-color: var(--primary);
+.premium-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.08);
+    /* Soft diffuse shadow */
+    border-color: rgba(99, 102, 241, 0.1);
+    /* Slight tint on hover */
 }
 
-.platform-icon {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 24px;
+/* Highlight Indicator */
+.premium-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.0), transparent);
+    transition: all 0.4s;
+}
+
+.premium-card:hover::before {
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.5), transparent);
+}
+
+/* Icons Container - Light Theme */
+.icon-wrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
-    font-size: 40px;
+    margin-bottom: 24px;
+    transition: transform 0.3s;
 }
 
-.bg-chrome {
-    background: rgba(66, 133, 244, 0.1);
-    color: #4285f4;
+.premium-card:hover .icon-wrapper {
+    transform: scale(1.1);
 }
 
-.bg-macos {
-    background: rgba(0, 0, 0, 0.05);
-    color: #000;
+/* Semantic Colors */
+.icon-chrome {
+    background: #eef2ff;
+    /* Very light indigo */
+    color: #4f46e5;
+    /* Indigo 600 */
 }
 
-.bg-ios {
-    background: rgba(0, 122, 255, 0.1);
-    color: #007aff;
+.icon-apple {
+    background: #f8fafc;
+    /* Slate 50 */
+    color: #0f172a;
+    /* Slate 900 */
 }
 
-.download-card h3 {
+.icon-ios {
+    background: #f0f9ff;
+    /* Sky 50 */
+    color: #0ea5e9;
+    /* Sky 500 */
+}
+
+.icon-wrapper svg {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+}
+
+
+.premium-card h3 {
     font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
     margin-bottom: 12px;
 }
 
-.download-card p {
-    color: var(--text-light);
+.premium-card p {
+    color: #64748b;
+    /* Slate 500 */
     font-size: 15px;
-    margin-bottom: 24px;
+    line-height: 1.6;
+    margin-bottom: 32px;
     flex-grow: 1;
+    text-align: left;
 }
 
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+/* Buttons - Light Theme */
+.btn-glass {
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(5px);
-    z-index: 2000;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal.active {
-    display: flex;
-}
-
-.modal-content {
-    background: white;
-    padding: 40px;
-    border-radius: 24px;
-    max-width: 500px;
-    width: 90%;
-    position: relative;
-    box-shadow: var(--shadow-lg);
-    animation: modalIn 0.3s ease-out;
-}
-
-@keyframes modalIn {
-    from {
-        transform: scale(0.9);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.close-modal {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    cursor: pointer;
-    color: var(--text-light);
-}
-
-.qr-container {
-    background: #f3f4f6;
-    padding: 24px;
-    border-radius: 16px;
-    margin: 24px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 200px;
-}
-
-.qr-placeholder {
-    width: 180px;
-    height: 180px;
-    background: white;
-    border: 8px solid #000;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    color: #000;
+    padding: 14px;
     border-radius: 12px;
+    background: #f8fafc;
+    color: #475569;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
-.qr-placeholder::before {
-    content: "SCAN ME";
-    font-size: 12px;
-    position: absolute;
+.btn-glass:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+    border-color: #cbd5e1;
+}
+
+.btn-primary-filled {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    /* Brand Gradient */
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.15);
+}
+
+.btn-primary-filled:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 12px -1px rgba(99, 102, 241, 0.25);
+}
+
+
+/* Modal Overhaul - Light Theme */
+.modal-content.premium-modal {
+    background: #ffffff;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    /* Soft deep shadow */
+}
+
+.modal-header {
+    background: #f8fafc;
+    padding: 20px 32px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.modal-header h3 {
+    color: #0f172a;
+}
+
+.premium-modal .close-modal {
     bottom: -25px;
 }
 
@@ -844,4 +907,47 @@ h1 {
 
 .install-steps li {
     margin-bottom: 10px;
+}
+
+.premium-steps li {
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 12px;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #cbd5e1;
+    font-size: 15px;
+}
+
+.step-number {
+    background: rgba(255, 255, 255, 0.1);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    flex-shrink: 0;
+}
+
+.qr-box {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .download-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
