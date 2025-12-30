@@ -43,8 +43,8 @@
                     Immerse 是一款智能浏览器插件，能在你浏览中文网页时，智能将部分词汇替换为通过语境学习的英语单词。无需刻意背诵，在日常阅读中自然习得。
                 </p>
                 <div class="hero-actions">
-                    <a href="#" class="btn-primary">
-                        <span class="icon">🚀</span> 免费添加到 Chrome
+                    <a href="#download" class="btn-primary">
+                        <span class="icon">🚀</span> 立即下载安装
                     </a>
                     <a href="#demo" class="btn-secondary">查看演示</a>
                 </div>
@@ -224,8 +224,87 @@
         </div>
     </section>
 
+    <!-- Downloads Section -->
+    <section id="download" class="downloads">
+        <div class="container">
+            <div class="section-header">
+                <h2>全平台支持</h2>
+                <p>无论在电脑还是手机，都能同步你的学习进度</p>
+            </div>
+            <div class="download-grid">
+                <!-- Chrome -->
+                <div class="download-card">
+                    <div class="platform-icon bg-chrome">🌐</div>
+                    <h3>桌面浏览器</h3>
+                    <p>支持 Chrome, Edge 等主流 Chromium 浏览器，安装简单，功能最全。</p>
+                    <a href="https://chrome.google.com/webstore" class="btn-primary full-width"
+                        style="justify-content: center;">
+                        添加到 Chrome
+                    </a>
+                </div>
+
+                <!-- macOS -->
+                <div class="download-card">
+                    <div class="platform-icon bg-macos">💻</div>
+                    <h3>macOS 官方扩展</h3>
+                    <p>专为 Safari 打造，原生性能更出色，完美融合系统体验。</p>
+                    <button class="btn-secondary full-width" style="justify-content: center;"
+                        onclick="openModal('macos-modal')">
+                        安装指南
+                    </button>
+                </div>
+
+                <!-- iOS -->
+                <div class="download-card">
+                    <div class="platform-icon bg-ios">📱</div>
+                    <h3>iOS / iPadOS</h3>
+                    <p>在手机上也能享受沉浸式学习，支持移动端 Safari 扩展。</p>
+                    <button class="btn-secondary full-width" style="justify-content: center;"
+                        onclick="openModal('ios-modal')">
+                        获取 iOS 版
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- macOS Install Modal -->
+    <div id="macos-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('macos-modal')">&times;</span>
+            <h3 style="margin-bottom: 20px; font-size: 24px;">安装 macOS 版</h3>
+            <div class="install-steps">
+                <p style="margin-bottom: 15px;">请按照以下步骤启动：</p>
+                <ol>
+                    <li>点击下载官方安装包（需 Xcode 运行或等待商店审核）。</li>
+                    <li>在系统中打开 <strong>Safari 浏览器</strong>。</li>
+                    <li>进入顶部菜单的 <strong>设置 > 扩展</strong>。</li>
+                    <li>勾选 <strong>Immerse</strong> 并允许访问。</li>
+                </ol>
+            </div>
+            <a href="#" class="btn-primary full-width" style="margin-top: 30px; justify-content: center;">下载 .dmg
+                (即将上线)</a>
+        </div>
+    </div>
+
+    <!-- iOS Install Modal -->
+    <div id="ios-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('ios-modal')">&times;</span>
+            <h3 style="margin-bottom: 10px; font-size: 24px;">iOS 版安装指南</h3>
+            <p style="color: var(--text-light); margin-bottom: 20px;">扫码加入 TestFlight 抢先体验</p>
+            <div class="qr-container">
+                <div class="qr-placeholder">
+                    <span>QR CODE</span>
+                </div>
+            </div>
+            <p style="font-size: 14px; color: var(--text-light); margin-top: 20px;">* 您需要先安装 Apple 官方的 TestFlight 应用</p>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
+
         <div class="container footer-container">
             <div class="footer-col">
                 <a href="#" class="logo footer-logo">
@@ -276,6 +355,25 @@
         menuBtn?.addEventListener('click', () => {
             navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
         });
+
+        // Modal Functions
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
     </script>
 </body>
 
